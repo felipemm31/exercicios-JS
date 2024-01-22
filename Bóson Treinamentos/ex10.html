@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicios Cyan</title>
+    <style>
+        body {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 style="color: rgb(255, 0, 0);">Aprendendo JavaScript</h1>
+    <p id="teste"></p>
+
+
+<script>
+
+    /* 10. Escreva uma função em JavaScript que conte quantas vezes um caractere aparece em uma string. 
+    Tanto o caractere quanto a string devem ser fornecidos pelo usuário. */
+
+function contarCaractere() {
+    
+    let inputString = prompt("Digite a string:");
+
+    // Verificar se a entrada da string é válida
+    if (inputString === null || inputString === "") {
+        return document.write("Por favor, forneça uma string válida.");
+    }
+
+    // Solicitar ao usuário a entrada do caractere a ser contado
+    let inputCaractere = prompt("Digite o caractere a ser contado:");
+
+    // Verificar se a entrada do caractere é válida
+    if (inputCaractere === null || inputCaractere.length !== 1) {
+        return document.write("Por favor, forneça um caractere válido.");
+    }
+
+    // Contar a ocorrência do caractere na string
+    let contagem = 0;
+    for (let i = 0; i < inputString.length; i++) {
+        if (inputString[i] === inputCaractere) {
+            contagem++;
+        }
+    }
+
+    // Exibir o resultado
+    document.write(`O caractere "${inputCaractere}" aparece ${contagem} vezes na string.`);
+}
+
+contarCaractere();
+
+</script>
+
+</body>
+</html> 

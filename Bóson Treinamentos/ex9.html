@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicios Cyan</title>
+    <style>
+        body {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 style="color: rgb(255, 0, 0);">Aprendendo JavaScript</h1>
+    <p id="teste"></p>
+
+
+<script>
+    
+    //9. Escreva uma função que calcule e retorne o fatorial de um número inteiro fornecido pelo usuário.
+
+function calcularFatorial(numero){
+   
+    if (numero < 0) { //verifica se o numero é negativo
+        return "O fatorial não é definido p/ números negativos"
+    }
+
+    if (numero === 0){ //fatorial de 0 é 1
+        return 1;
+    }
+
+    let resultado = 1; //inicializa o resultado como 1
+
+    for (let i=1; i<= numero; i++) { //calcula o fatorial usando um loop
+        resultado *= i;
+    }
+    
+    return resultado;
+
+}
+
+const numeroUsuario = parseInt(prompt("Digite um número inteiro para calcular o fatorial:"));
+const resultadoFatorial = calcularFatorial(numeroUsuario);
+
+document.write('O fatorial de '+numeroUsuario+' é: '+resultadoFatorial+'.');
+
+</script>
+
+</body>
+</html> 

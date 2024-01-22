@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicios Cyan</title>
+    <style>
+        body {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 style="color: rgb(255, 0, 0);">Aprendendo JavaScript</h1>
+    <p id="teste"></p>
+
+
+<script>
+
+/* 8. Escreva uma função que informe o retorno de um investimento (montante) com base nos valores do capital inicial, 
+tempo em meses e taxa de juros mensal, fornecidos pelo usuário.
+
+Use a fórmula: M = C * (1+i)t
+Onde:
+
+C = Capital inicial investido
+i = Taxa de juros, em percentual
+t = Tempo do investimento, em meses
+Exiba o resultado com duas casas decimais. */
+
+function investimento(capitalInicial, taxaJuros, tempoMeses){
+
+    //m=c*(1+i)^t
+
+    let i = taxaJuros/100;
+    let m = capitalInicial*Math.pow((1+i),tempoMeses);
+
+    m = parseFloat(m.toFixed(2)); //arredondando p/ 2 casas decimais
+
+    return m;
+
+}
+
+let capitalInicial = prompt('Digite o capital inicial investido:');
+let taxaJuros = prompt('Digite a taxa mensal de juros (%):');
+let tempoMeses = prompt('Digite o tempo de investimento em meses:');
+
+let resultado = investimento(capitalInicial, taxaJuros, tempoMeses);
+
+document.write('O retorno de seu investimento (montante) será de: R$ '+resultado+'.');
+
+</script>
+
+</body>
+</html> 

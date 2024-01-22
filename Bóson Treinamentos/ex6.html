@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicios Cyan</title>
+    <style>
+        body {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 style="color: rgb(255, 0, 0);">Aprendendo JavaScript</h1>
+    <p id="teste"></p>
+
+
+<script>
+
+/* 6. Escreva uma função que mostre na tela um número fornecido pelo usuário, porém invertido. 
+Por exemplo, o usuário fornece o número 875 e a função mostra na tela o número 578. */
+
+function inverteNumero (numero) {
+    let numeroString = numero.toString(''); //converte o numero para uma string
+    numeroString = numeroString.split('').reverse('').join('') //inverte a ordem dos caracteres (split divide a string em uma matriz de strings, reverse inverte a ordem das strings da array, join junta as strings que foram separadas no 'split')
+    let numeroInvertido = parseFloat(numeroString); //parseFloat converte a string de volta p/ numero
+
+return numeroInvertido;
+
+}
+
+let num = prompt("Digite um número:");
+let numInvertido = inverteNumero(num)
+
+document.write(numInvertido);
+
+</script>
+
+</body>
+</html> 

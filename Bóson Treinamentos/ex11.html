@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicios Cyan</title>
+    <style>
+        body {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 style="color: rgb(255, 0, 0);">Aprendendo JavaScript</h1>
+    <p id="teste"></p>
+
+
+<script>
+
+//11. Escreva uma função que verifica se um número fornecido pelo usuário em um prompt é primo ou não.
+
+
+
+function primo(numero) {
+    
+    if (numero <= 1) { // se o número for menor ou igual a 1, não é primo
+        return false;
+    }
+
+    // verifica se o número é divisível por algum número de 2 até a raiz quadrada do número
+    for (let i = 2; i <= Math.sqrt(numero); i++) {
+        if (numero % i === 0) {
+            return false; // Se for divisível, não é primo
+        }
+    }
+
+    return true; // Se não for divisível por nenhum número, é primo
+}
+
+const numeroUsuario = prompt("Digite um número para verificar se é primo:");
+
+// Converte a entrada do usuário para um número inteiro
+const numeroInteiro = parseInt(numeroUsuario);
+
+// Verifica se o número fornecido pelo usuário é primo ou não
+if (isNaN(numeroInteiro)) {
+    alert("Por favor, insira um número válido.");
+} else {
+    if (primo(numeroInteiro)) {
+        document.write(`${numeroInteiro} é um número primo.`);
+    } else {
+        document.write(`${numeroInteiro} não é um número primo.`);
+    }
+}
+
+</script>
+
+</body>
+</html> 

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicios Cyan</title>
+    <style>
+        body {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 style="color: rgb(255, 0, 0);">Aprendendo JavaScript</h1>
+    <p id="teste"></p>
+
+
+<script>
+
+function checkStr(str1, str2) {
+    return str1.endsWith(str2);
+  };
+
+  var resultado = checkStr("Ola mundo!", "mundo!");
+  console.log(resultado); //true
+  
+  var resultado1 = checkStr("Olá a todos!", "Mundo!");
+  console.log(resultado1); //false
+
+</script>
+
+</body>
+</html> 
